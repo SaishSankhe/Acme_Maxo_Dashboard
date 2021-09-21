@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import axios from 'axios';
+import React from 'react';
+
+// components
+import Dashboard from './components/Dashboard';
 
 function App() {
-	const [getMessage, setMessage] = useState('');
-
-	useEffect(() => {
-		(async function getData() {
-			const { data } = await axios.get('/hello');
-			setMessage(data.response);
-			console.log(data.response);
-		})();
-	}, []);
-
 	return (
-		<div className="App">
-			<header className="App-header">
-				<p>{getMessage}</p>
+		<div className="m-8">
+			<header>
+				<h1 className="m-4 text-4xl font-bold text-center">Dashboard</h1>
 			</header>
+			<main>
+				<Dashboard />
+			</main>
 		</div>
 	);
 }

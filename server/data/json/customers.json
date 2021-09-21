@@ -1,0 +1,182 @@
+[
+    {
+        "CUSTOMER_ID": "1",
+        "NAME": "Kathy Martin",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "6649 N Blue Gum St",
+        "CITY": "New Orleans",
+        "POSTAL_CODE": "70116",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "2",
+        "NAME": "Jeanne Fitzgerald",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "4 B Blue Ridge Blvd",
+        "CITY": "Livingston",
+        "POSTAL_CODE": "48116",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "3",
+        "NAME": "Samantha Powers",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "8 W Cerritos Ave #54",
+        "CITY": "Gloucester",
+        "POSTAL_CODE": "08014",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "4",
+        "NAME": "Rebecca Atkinson",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "639 Main St",
+        "CITY": "Anchorage",
+        "POSTAL_CODE": "99501",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "5",
+        "NAME": "Geert Orwell",
+        "GENDER": "Male",
+        "STREET_ADDRESS": "10 Park St",
+        "CITY": "Butler",
+        "POSTAL_CODE": "45011",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "6",
+        "NAME": "Edith Bunker",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "86 Tress Falls St",
+        "CITY": "Toronto",
+        "POSTAL_CODE": "M4C 1R1",
+        "COUNTRY": "CA"
+    },
+    {
+        "CUSTOMER_ID": "7",
+        "NAME": "Lakshmi Rohanna",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "25 E 75Th St",
+        "CITY": "Los Angeles",
+        "POSTAL_CODE": "90034",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "8",
+        "NAME": "Jennifer Gareth",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "73 State Road 434 E",
+        "CITY": "Maricopa",
+        "POSTAL_CODE": "85013",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "9",
+        "NAME": "Viraj Shakur",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "69734 E Carrillo St",
+        "CITY": "Warren",
+        "POSTAL_CODE": "37110",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "10",
+        "NAME": "Sun Wong",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "10 Westminster St",
+        "CITY": "Somerville",
+        "POSTAL_CODE": "02144",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "11",
+        "NAME": "Sudhir Abbogottu",
+        "GENDER": "Male",
+        "STREET_ADDRESS": "10276 Brooks St",
+        "CITY": "San Francisco",
+        "POSTAL_CODE": "94105",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "12",
+        "NAME": "Alice Wells",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "1 Washington St",
+        "CITY": "Palm Beach",
+        "POSTAL_CODE": "33461",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "13",
+        "NAME": "Allen Broadbent",
+        "GENDER": "Male",
+        "STREET_ADDRESS": "9 Tower Ave",
+        "CITY": "Boone",
+        "POSTAL_CODE": "41005",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "14",
+        "NAME": "Brooke Miles",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "63 Smith Ln #8343",
+        "CITY": "Clay",
+        "POSTAL_CODE": "38575",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "15",
+        "NAME": "Roger Mooreson",
+        "GENDER": "Male",
+        "STREET_ADDRESS": "55713 Lake City Hwy",
+        "CITY": "South Bend",
+        "POSTAL_CODE": "46601",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "16",
+        "NAME": "Shawn Chacon",
+        "GENDER": "Male",
+        "STREET_ADDRESS": "6 Arch St #9757",
+        "CITY": "Red Deer",
+        "POSTAL_CODE": "T4R 2H5",
+        "COUNTRY": "CA"
+    },
+    {
+        "CUSTOMER_ID": "17",
+        "NAME": "James Baldwin",
+        "GENDER": "Male",
+        "STREET_ADDRESS": "6 Sunrise Ave",
+        "CITY": "Oneida",
+        "POSTAL_CODE": "13501",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "18",
+        "NAME": "Keith Ellington",
+        "GENDER": "",
+        "STREET_ADDRESS": "13 Gunnison St",
+        "CITY": "Plano",
+        "POSTAL_CODE": "75075",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "19",
+        "NAME": "Jean Colbert",
+        "GENDER": "Male",
+        "STREET_ADDRESS": "63517 Dupont St",
+        "CITY": "Jackson",
+        "POSTAL_CODE": "39211",
+        "COUNTRY": "US"
+    },
+    {
+        "CUSTOMER_ID": "20",
+        "NAME": "Minoo Atayesh",
+        "GENDER": "Female",
+        "STREET_ADDRESS": "5 E Truman Rd",
+        "CITY": "Abilene",
+        "POSTAL_CODE": "79602",
+        "COUNTRY": "US"
+    }
+]
