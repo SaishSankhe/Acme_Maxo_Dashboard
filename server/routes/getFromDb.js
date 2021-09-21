@@ -115,7 +115,6 @@ router.get('/:company/:month', async (req, res) => {
 	// company should be either "maxo" or "acme"
 	// month should be in format "MM"
 	const { company } = req.params;
-	console.log(company);
 	const { month } = req.params;
 
 	if (company !== 'maxo' && company !== 'acme') {
