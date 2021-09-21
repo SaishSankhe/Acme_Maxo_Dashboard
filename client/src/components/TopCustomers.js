@@ -14,20 +14,28 @@ function TotalOrders() {
 	}
 
 	return (
-		<div className="flex flex-col py-4">
-			<h2 className="text-xl font-bold">Top customers</h2>
+		<div className="flex flex-col py-6">
+			<div className="border-l-8 pl-4 border-blue-600 mb-4">
+				<h2 className="text-2xl font-bold text-blue-900">Top customers</h2>
+				<p className="text-sm py-1 text-blue-600">
+					Top 10 customers based on their order volume (Acme and Maxo combined)
+				</p>
+			</div>
 			<div className="flex flex-row text-center flex-wrap">
 				{topCustomers.map((customer, index) => (
 					<div
 						key={index}
-						className="flex flex-col px-4 py-8 bg-gray-100 rounded-md mr-8 my-4 flex-grow transition-all hover:shadow-lg duration-250"
+						className="flex flex-col px-4 py-8 bg-blue-100 bg-opacity-20 relative rounded-md mr-8 my-4 flex-grow transition-all hover:shadow-md duration-250"
 					>
-						<p className="text-4xl font-extrabold text-gray-700 pb-2">
+						<span className="text-xs text-left bg-yellow-300 text-blue-900 text-semibold p-1 px-2 rounded-full absolute -top-2 -left-3">
+							{index + 1}
+						</span>
+						<p className="text-4xl font-extrabold text-blue-900 pb-2">
 							{customer?.total_orders}
-							<span className="text-xs font-medium"> orders</span>
+							<span className="text-xs font-medium text-blue-600"> orders</span>
 						</p>
-						<p className="text-xl font-bold text-gray-700">{customer?.name}</p>
-						<p className="text-gray-700">
+						<p className="text-lg font-bold text-blue-900">{customer?.name}</p>
+						<p className="text-blue-600 text-sm">
 							{customer?.city}, {customer?.country}
 						</p>
 					</div>

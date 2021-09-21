@@ -14,16 +14,21 @@ function CustomerOverlap() {
 	}
 
 	return (
-		<div className="flex flex-col py-4">
-			<h2 className="text-xl font-bold">Customer overlap</h2>
+		<div className="flex flex-col py-6">
+			<div className="border-l-8 pl-4 border-blue-600 mb-4">
+				<h2 className="text-2xl font-bold text-blue-900">Customer overlap</h2>
+				<p className="text-sm py-1 text-blue-600">
+					Customers that ordered from Acme as well as Maxo
+				</p>
+			</div>
 			<div className="flex flex-row text-center flex-wrap">
 				{overlap.map((customer, index) => (
 					<div
 						key={index}
-						className="flex flex-col px-4 py-8 bg-gray-100 rounded-md mr-8 my-4 flex-grow transition-all hover:shadow-lg duration-250"
+						className="flex flex-col px-4 py-8 bg-blue-100 bg-opacity-20 rounded-md mr-8 my-4 flex-grow transition-all hover:shadow-lg duration-250"
 					>
-						<p className="text-xl font-bold text-gray-700">{customer?.name}</p>
-						<p className="text-gray-700">
+						<p className="text-xl font-bold text-blue-900">{customer?.name}</p>
+						<p className="text-blue-600">
 							{customer?.city}, {customer?.country}
 						</p>
 					</div>

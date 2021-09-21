@@ -52,8 +52,13 @@ function MonthlyOrders() {
 	}
 
 	return (
-		<div className="flex flex-col py-4">
-			<h2 className="text-xl font-bold">Monthly orders</h2>
+		<div className="flex flex-col py-8">
+			<div className="border-l-8 pl-4 border-blue-600 mb-4">
+				<h2 className="text-2xl font-bold text-blue-900">Monthly orders</h2>
+				<p className="text-sm py-1 text-blue-600">
+					All orders for Acme and Maxo in the year 2017 divided by months
+				</p>
+			</div>
 			<ResponsiveContainer width="95%" height={300} className="my-8">
 				<LineChart height={250} data={monthlyCustomers}>
 					<CartesianGrid strokeDasharray="3 3" />
@@ -61,8 +66,8 @@ function MonthlyOrders() {
 					<YAxis />
 					<Tooltip />
 					<Legend />
-					<Line type="monotone" dataKey="acme" stroke="#8884d8" />
-					<Line type="monotone" dataKey="maxo" stroke="#82ca9d" />
+					<Line type="monotone" dataKey="acme" stroke="#DC2626" />
+					<Line type="monotone" dataKey="maxo" stroke="#065F46" />
 				</LineChart>
 			</ResponsiveContainer>
 		</div>
