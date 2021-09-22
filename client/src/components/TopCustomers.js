@@ -8,6 +8,7 @@ function TotalOrders() {
 		getTopCustomers();
 	}, []);
 
+	// get top 10 customers by order volume
 	async function getTopCustomers() {
 		const { data } = await axios.get('/get/top-10-customers');
 		setTopCustomers(data);
@@ -21,13 +22,13 @@ function TotalOrders() {
 					Top 10 customers based on their order volume (Acme and Maxo combined)
 				</p>
 			</div>
-			<div className="flex flex-row text-center flex-wrap">
+			<div className="flex flex-row text-center flex-wrap gap-x-12 gap-y-8 mt-8">
 				{topCustomers.map((customer, index) => (
 					<div
 						key={index}
-						className="flex flex-col px-4 py-8 bg-blue-100 bg-opacity-20 relative rounded-md mr-8 my-4 flex-grow transition-all hover:shadow-md duration-250"
+						className="flex flex-col px-7 py-8 bg-blue-100 bg-opacity-20 relative rounded-md flex-grow transition-all hover:shadow-md duration-250"
 					>
-						<span className="text-xs text-left bg-yellow-300 text-blue-900 text-semibold p-1 px-2 rounded-full absolute -top-2 -left-3">
+						<span className="text-xs text-left bg-yellow-300 text-blue-900 font-semibold p-1 px-2 rounded-full absolute -top-2 -left-3">
 							{index + 1}
 						</span>
 						<p className="text-4xl font-extrabold text-blue-900 pb-2">

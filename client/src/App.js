@@ -6,6 +6,7 @@ import TotalOrders from './components/TotalOrders';
 import TopCustomers from './components/TopCustomers';
 import CustomerOverlap from './components/CustomerOverlap';
 import MonthlyOrders from './components/MonthlyOrders';
+import Gender from './components/Gender';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 			<main>
 				<TotalOrders />
 				<TopCustomers />
+				<Gender />
 				<MonthlyOrders />
 				<CustomerOverlap />
 			</main>

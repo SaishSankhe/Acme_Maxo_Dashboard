@@ -94,6 +94,7 @@ A dashboard to visualise Acme and Maxo orders data for the year 2017.
 - After the backend was ready, I started working on frontend with React and tailwindCSS for UI.
 - I created different components for different functions, added styling using tailwindCSS.
 - I integrated recharts.js to add charts to display the information.
+- I also checked the webpage for basic Tota11y rules and everything passed.
 
 ## Steps to run Locally
 

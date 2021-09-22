@@ -6,15 +6,18 @@ function TotalOrders() {
 	const [maxoTotalOrders, setMaxoTotalOrders] = useState([]);
 
 	useEffect(() => {
+		// get the data from API, on page render
 		getAcmeTotalOrders();
 		getMaxoTotalOrders();
 	}, []);
 
+	// get all acme orders
 	async function getAcmeTotalOrders() {
 		const { data } = await axios.get('/get/all-acme-orders');
 		setAcmeTotalOrders(data);
 	}
 
+	// get all maxo orders
 	async function getMaxoTotalOrders() {
 		const { data } = await axios.get('/get/all-maxo-orders');
 		setMaxoTotalOrders(data);
@@ -30,14 +33,14 @@ function TotalOrders() {
 					All orders that are shipped before Dec 31st, 2017
 				</p>
 			</div>
-			<div className="flex flex-row text-center">
-				<div className="flex flex-col px-4 py-8 bg-blue-100 bg-opacity-20 rounded-md mr-8 my-4 flex-grow">
+			<div className="flex flex-row text-center gap-x-12 mt-4">
+				<div className="flex flex-col px-4 py-10 bg-blue-100 bg-opacity-20 rounded-md flex-grow">
 					<p className="text-5xl font-extrabold text-blue-900">
 						{acmeTotalOrders.length}
 					</p>
 					<p className="text-lg text-center font-normal text-blue-600">Acme</p>
 				</div>
-				<div className="flex flex-col px-4 py-8 bg-blue-100 bg-opacity-20 rounded-md ml-6 my-4 flex-grow">
+				<div className="flex flex-col px-4 py-10 bg-blue-100 bg-opacity-20 rounded-md flex-grow">
 					<p className="text-5xl font-extrabold text-blue-900">
 						{maxoTotalOrders.length}
 					</p>

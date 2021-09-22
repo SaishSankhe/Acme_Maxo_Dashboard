@@ -13,6 +13,7 @@ import {
 
 function MonthlyOrders() {
 	const [monthlyCustomers, setMonthlyCustomers] = useState([]);
+	// using object as a enumerator
 	const months = {
 		1: 'Jan',
 		2: 'Feb',
@@ -29,16 +30,23 @@ function MonthlyOrders() {
 	};
 
 	useEffect(() => {
-		getMonthkyCustomers();
+		getMonthlyCustomers();
 	}, []);
 
-	async function getMonthkyCustomers() {
+	async function getMonthlyCustomers() {
 		let monthlyOrders = [];
 
 		for (let i = 1; i <= 12; i++) {
-			const { data: acme } = await axios.get(`/get/acme/${i}`);
-			const { data: maxo } = await axios.get(`/get/maxo/${i}`);
+			let monthNumber = '';
 
+			// construct month string in "MM" format
+			if (i < 10) monthNumber = '0' + i;
+			else monthNumber = i.toString();
+
+			const { data: acme } = await axios.get(`/get/acme/${monthNumber}`);
+			const { data: maxo } = await axios.get(`/get/maxo/${monthNumber}`);
+
+			// construct object to pass to recharts.js
 			const month = {
 				month: months[i],
 				acme: acme.length,

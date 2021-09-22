@@ -43,13 +43,19 @@ router.get('/all-orders', async (req, res) => {
 router.get('/top-10-customers', async (req, res) => {
 	try {
 		let topCustomers = await pool.query(
-			'SELECT customer_id, count(customer_id) FROM orders GROUP BY customer_id ORDER BY count(customer_id) DESC LIMIT 10'
+			'SELECT customer_id, count(customer_id)\
+			FROM orders\
+			GROUP BY customer_id\
+			ORDER BY count(customer_id) DESC\
+			LIMIT 10'
 		);
 
-		topCustomers = topCustomers.rows;
+		topCustomers = topCustomers.rows; // returns 10 customer_ids
 
 		let topCustomersData = [];
 
+		// for all the customer_ids got from the above query
+		// get respective customer data from customers table
 		for (const customer of topCustomers) {
 			const customerData = await pool.query(
 				'SELECT * FROM customers WHERE customer_id=$1',
@@ -118,18 +124,22 @@ router.get('/:company/:month', async (req, res) => {
 	const { month } = req.params;
 	const monthRegex = /0[1-9]|1[0-2]/;
 
+	// error handling for company
 	if (company !== 'maxo' && company !== 'acme') {
 		res.status(500).json('Wrong company parameter.');
 		return;
 	}
 
+	// error handling for month
 	if (!month.match(monthRegex) || month.length > 2) {
 		res.status(500).json('Wrong month parameter.');
 		return;
 	}
 
+	// construct date string
 	const startDate = '2017-' + month + '-01';
 	const endDate = (generateEndDate = () => {
+		// generate end date based on which month is it
 		if (
 			month === 1 ||
 			month === 3 ||
@@ -142,10 +152,11 @@ router.get('/:company/:month', async (req, res) => {
 			return '2017-' + month + '-31';
 		else if (month === 4 || month === 6 || month === 9 || month === 11)
 			return '2017-' + month + '-30';
-		else return '2017-' + month + '-28';
+		else return '2017-' + month + '-28'; // as 2017 was not leap year, directly set date as 28
 	})();
 
 	try {
+		// if company parameter is "maxo"
 		if (company === 'maxo') {
 			const orders = await pool.query(
 				'SELECT maxo.order_id, maxo.product_id, maxo.customer_id, order_date, shipping_date\
@@ -158,6 +169,7 @@ router.get('/:company/:month', async (req, res) => {
 
 			res.status(200).json(orders.rows);
 		} else if (company === 'acme') {
+			// if company parameter is "acme"
 			const orders = await pool.query(
 				'SELECT acme.order_id, acme.product_id, acme.customer_id, order_date, shipping_date\
         FROM acme\
@@ -193,6 +205,7 @@ router.get('/overlap', async (req, res) => {
 
 		let topCustomersData = [];
 
+		// for all customer_ids, get respective customer data
 		for (const customer of orders) {
 			const customerData = await pool.query(
 				'SELECT * FROM customers WHERE customer_id=$1',
@@ -212,6 +225,36 @@ router.get('/overlap', async (req, res) => {
 		}
 
 		res.status(200).json(topCustomersData);
+	} catch (error) {
+		console.log(error.message);
+		res.status(500).json('There was some issue with the database.');
+	}
+});
+
+/*
+ * get gender based data on customers
+ * returns an object with male and female counts
+ */
+router.get('/gender', async (req, res) => {
+	try {
+		const maleCustomers = await pool.query(
+			"SELECT count(customer_id)\
+        FROM customers\
+        WHERE gender = 'Male'"
+		);
+
+		const femaleCustomers = await pool.query(
+			"SELECT count(customer_id)\
+        FROM customers\
+        WHERE gender = 'Female'"
+		);
+
+		const genderDistribution = {
+			male: maleCustomers.rows[0].count,
+			female: femaleCustomers.rows[0].count,
+		};
+
+		res.status(200).json(genderDistribution);
 	} catch (error) {
 		console.log(error.message);
 		res.status(500).json('There was some issue with the database.');
