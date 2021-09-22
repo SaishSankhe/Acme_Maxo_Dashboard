@@ -116,16 +116,14 @@ router.get('/:company/:month', async (req, res) => {
 	// month should be in format "MM"
 	const { company } = req.params;
 	const { month } = req.params;
+	const monthRegex = /0[1-9]|1[0-2]/;
 
 	if (company !== 'maxo' && company !== 'acme') {
 		res.status(500).json('Wrong company parameter.');
 		return;
 	}
 
-	if (
-		(parseInt(month) < 1 && parseInt(month) > 12) ||
-		parseInt(month).toString().length !== month.length
-	) {
+	if (!month.match(monthRegex) || month.length > 2) {
 		res.status(500).json('Wrong month parameter.');
 		return;
 	}
@@ -179,7 +177,7 @@ router.get('/:company/:month', async (req, res) => {
 
 /*
  * get all customers that ordered from maxo as well as acme
- * returns an array with customer_ids
+ * returns an array with customer information
  */
 router.get('/overlap', async (req, res) => {
 	try {
