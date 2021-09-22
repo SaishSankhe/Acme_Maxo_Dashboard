@@ -90,6 +90,12 @@ A dashboard to visualise Acme and Maxo orders data for the year 2017.
   ```
 
   This route is used to get all customers who ordered from Acme and Maxo as well. It returns an array with customer information.
+  
+  ```
+  /get/gender
+  ```
+
+  This route is used to get gender distribution data of customers who from Acme and Maxo as well. It returns an object.
 
 - After the backend was ready, I started working on frontend with React and tailwindCSS for UI.
 - I created different components for different functions, added styling using tailwindCSS.
