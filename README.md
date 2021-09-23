@@ -15,7 +15,7 @@ A dashboard to visualise Acme and Maxo orders data for the year 2017.
 - First, I cleaned the data files using Python, created clean csv files of Acme, Maxo.
 - From new csv files, I created customers, orders, acme and maxo files for adding it into database. These files are created keeping in mind basic normalisation rules for tables in database.
 - As I was going to use Node.js, I exported csv files to JSON.
-- All the python files, csv files and json files can be found in "server/data/".
+- All the python files, csv files and json files can be found in "[server/data/](/server/data)".
 - I used Node.js as I had more experience working with Node.js backend.
 - Then I created database in postgres, connected it with backend.
 - After the database was setup and connected, I developed multiple routes to insert and get data to and from the database.
@@ -126,9 +126,9 @@ A dashboard to visualise Acme and Maxo orders data for the year 2017.
   cd server && npm install
 ```
 
-- Open "db.js" and change the credentials to your postgres credentials.
+- Open "[db.js](/server/db.js)" and change the credentials to your postgres credentials.
 
-- Open "database.sql" file and execute the commands. It will create "customers" database. In "customers" database, four tables will be created: customers, orders, acme, maxo.
+- Open "[database.sql](/server/database.sql)" file and execute the commands. It will create "customers" database. In "customers" database, four tables will be created: customers, orders, acme, maxo.
 
 - Start the server
 
@@ -136,7 +136,7 @@ A dashboard to visualise Acme and Maxo orders data for the year 2017.
   cd server && npm start
 ```
 
-- Server will be running on http://localhost:5000/ Now copy/paste the following links to seed the database:
+- Server will be running on http://localhost:5000/ Now copy/paste the following URLs to seed the database:
 
 ```bash
   http://localhost:5000/insert/customers
