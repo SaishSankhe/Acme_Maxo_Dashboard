@@ -107,13 +107,13 @@ A dashboard to visualise Acme and Maxo orders data for the year 2017.
 - Clone the project
 
 ```bash
-  git clone https://github.com/SaishSankhe/Xbiome_Coding_Challenge/
+  git clone https://github.com/SaishSankhe/Acme_Maxo_Dashboard/
 ```
 
 - Go to the project directory
 
 ```bash
-  cd Xbiome_Coding_Challenge
+  cd Acme_Maxo_Dashboard
 ```
 
 - Install dependencies for server and client both
