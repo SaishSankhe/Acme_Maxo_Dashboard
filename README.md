@@ -1,4 +1,4 @@
-# Xbiome coding challenge
+# Acme x Maxo 2017 orders data
 
 A dashboard to visualise Acme and Maxo orders data for the year 2017.
 
